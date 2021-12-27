@@ -30,8 +30,7 @@ Details to consider during development:
   The current player selects the column to drop their piece in. The piece will fall down until it it reaches the end of that column. A column end is ether at the bottom row or another piece occupies the next bottom spot. Only one piece may occupy each spot. Once a piece occupies a spot, the creates a block and makes the next higher spot a new end. The below visual demonstrates these two cases.
  
  
- visual here
-
+![playing pieces](https://user-images.githubusercontent.com/10605443/147503478-954c222d-220e-444d-bcd3-5affee52f52b.JPG)
 
 **Check for winner:**
 
@@ -44,9 +43,8 @@ Checking diagonal for wins is a bit different:
 Checking diagonal up: increment column count by one, increment row count by one
 		
    Checking for diagonal wins that go from one point then move up only need to be checked at specific points. It is not possible for this win to happen if the checks are all in the last 3 columns or last three rows. At least one check will have to be within the first four columns and first three rows (visual below). Some instances do not need to be checked – such as a play at 0,0 – but excluding these will add another layer of complexity and provide no functionality.
-    
-    
- visual here
+
+![diagonal up](https://user-images.githubusercontent.com/10605443/147503472-8dfb558d-cb61-433c-a6f4-5a260d6a8311.JPG)
 
 
 Checking diagonal down: decrement column count by one, increment column count by one
